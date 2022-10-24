@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Formulario de Interface Web</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <h1>FORMULARIO DE AJOTA</h1>
+
+    <form>
+        <fieldset>
+            <legend>Datos Personales</legend>
+                <div>
+                    <label for="lprefijo" title="pref">Prefijo: </label>
+                    <input id="impprefijo" name="prefijo" type="text">
+                </div>
+                <div>
+                    <label for="lnombre" title="nomb">Nombre: </label>
+                    <input id="impnombre" name="nombre" type="text">
+                </div>
+                <div>
+                    <label for="lapellidos" title="apell">Apellidos: </label>
+                    <input id="impapellidos" name="apellidos" type="text">
+                </div>
+                <div>
+                    <label for="lemail" title="eml">Email: </label>
+                    <input id="impemail" name="email" type="email">
+                </div>
+                <div>
+                    <label for="ltelefono" title="telf">Teléfono: </label>
+                    <input id="imptelefono" name="telefono" type="tel">
+                </div>
+                <div>
+                    <label for="lfechanacimiento" title="fnaci">Fecha de nacimiento: </label>
+                    <input id="impfechanacimiento" name="fechanacimiento" type="date">
+                </div>
+                <div>
+                    <label for="ledad" title="ed">Edad: </label>
+                    <input id="impedad" name="edad" type="number">
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos Adicionales</legend>
+                <div>
+                    <label for="lcolor" title="colpref">Color preferido: </label>
+                    <input id="impcolor" name="colorpreferido" type="color">
+                </div>
+                <div>
+                    <label for="linicioestudios" title="iniestud">Inicio de estudios: </label>
+                    <input id="impinicioestudios" name="inicioestudios" type="month">
+                </div>
+                <div>
+                    <label for="lpweb" title="pweb">Página web: </label>
+                    <input id="impweb" name="web" type="url">
+                </div>
+                <div>
+                    <label for="lcurso" title="cursoactual">Curso actual: </label>
+                    <select id="cursos" name="curso">
+                        <option id="impoption2021-2022" name="option2021-2022" value="2021/2022">2021/2022</option>
+                        <option id="impoption2022-2023" name="option2022-2023" value="2022/2023">2022/2023</option>
+                      </select>
+                </div>
+                <div>
+                    <label for="lsatisfaccion" title="satisf">Nivel de satisfacción: </label>
+                    <input id="impsatisfaccion" name="satisfaccion" type="range">
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contraseña</legend>
+                <div>
+                    <label for="lpassword" title="passwd">Contraseña actual: </label>
+                    <input id="imppassword" name="password" type="password">
+                </div>
+                <div>
+                    <input id="impacepto" name="acepto" type="checkbox">
+                    <label for="lacepto" title="acpt">Comprendo la importancia de estableces contraseñas seguras </label>
+                </div>
+        </fieldset>
+
+        <div>
+            <input id="impenviar" name="enviar" type="submit">
+            <input id="impreset" name="reset" type="reset">
+        </div>
+    </form>
+    
+</body>
+</html>
