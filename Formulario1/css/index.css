@@ -1,5 +1,9 @@
+
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(247, 240, 240);
+    text-align: center;
+    align-items: center;
 }
 
 fieldset {
@@ -12,6 +16,7 @@ fieldset {
 
 legend {
     text-align: center;
+    font-weight: bolder;
 }
 
 div {
@@ -29,15 +34,9 @@ input, select{
     padding: 2px 4px 2px 4px;
 }
 
-
-input:required {
-    border: 2px solid;
-    border-color: black;
-}
-
 input:focus {
     border: 2px solid;
-    border-color: rgb(65, 65, 255);
+    border-color: rgb(41, 41, 255);
     outline: none;
 }
 
@@ -50,6 +49,13 @@ input:focus {
 }
 
 input:required:valid {
-    border-color: rgb(97, 172, 97) ;
+    border-color: rgb(97, 172, 97);
 }
+
+input:required:invalid {
+    border-color: rgb(234, 97, 97)
+}
+
+
+
 
