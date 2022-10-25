@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio de Formulario de Interface Web</title>
+    <title>Ejercicio de Formulario de Interfaces Web</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -16,23 +16,23 @@
             <legend>Datos Personales</legend>
                 <div>
                     <label for="lprefijo" title="pref">Prefijo: </label>
-                    <input id="impprefijo" name="prefijo" type="text">
+                    <input id="impprefijo" name="prefijo" type="text" autocomplete="honorific-prefix" autofocus>
                 </div>
                 <div>
                     <label for="lnombre" title="nomb">Nombre: </label>
-                    <input id="impnombre" name="nombre" type="text">
+                    <input id="impnombre" name="nombre" type="text" required>
                 </div>
                 <div>
                     <label for="lapellidos" title="apell">Apellidos: </label>
-                    <input id="impapellidos" name="apellidos" type="text">
+                    <input id="impapellidos" name="apellidos" type="text" required>
                 </div>
                 <div>
                     <label for="lemail" title="eml">Email: </label>
-                    <input id="impemail" name="email" type="email">
+                    <input id="impemail" name="email" type="email" required>
                 </div>
                 <div>
                     <label for="ltelefono" title="telf">Teléfono: </label>
-                    <input id="imptelefono" name="telefono" type="tel">
+                    <input id="imptelefono" name="telefono" type="tel" maxlength="9" minlength="9">
                 </div>
                 <div>
                     <label for="lfechanacimiento" title="fnaci">Fecha de nacimiento: </label>
@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <label for="ledad" title="ed">Edad: </label>
-                    <input id="impedad" name="edad" type="number">
+                    <input class="fondo" id="impedad" name="edad" type="number" min="16" max="130" >
                 </div>
         </fieldset>
 
@@ -52,7 +52,7 @@
                 </div>
                 <div>
                     <label for="linicioestudios" title="iniestud">Inicio de estudios: </label>
-                    <input id="impinicioestudios" name="inicioestudios" type="month">
+                    <input id="impinicioestudios" name="inicioestudios" type="month" min="2022-09">
                 </div>
                 <div>
                     <label for="lpweb" title="pweb">Página web: </label>
@@ -66,8 +66,9 @@
                       </select>
                 </div>
                 <div>
-                    <label for="lsatisfaccion" title="satisf">Nivel de satisfacción: </label>
-                    <input id="impsatisfaccion" name="satisfaccion" type="range">
+                    <label for="lsatisfaccion" title="satisf">Nivel de satisfacción: 0</label>
+                    <input id="impsatisfaccion" name="satisfaccion" type="range" min="0" max="10" step="0.5" value="5">
+                    <label for="lsatisfaccionfinal" title="satisfinal">10</label>
                 </div>
         </fieldset>
 
@@ -81,12 +82,11 @@
                     <input id="impacepto" name="acepto" type="checkbox">
                     <label for="lacepto" title="acpt">Comprendo la importancia de estableces contraseñas seguras </label>
                 </div>
+                <div>
+                    <input id="impenviar" name="enviar" type="submit">
+                    <input id="impreset" name="reset" type="reset">
+                </div>
         </fieldset>
-
-        <div>
-            <input id="impenviar" name="enviar" type="submit">
-            <input id="impreset" name="reset" type="reset">
-        </div>
     </form>
     
 </body>
