@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* Clase que utilizamos para mostrar en este caso
+una clase oculta hasta que la pantalla tenga una
+resolución determinada 
+*/
+
+@import url("styles.css");
+
+@media screen and (max-width: 480px) {
+    .mobile{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile{
+        text-align: center;
+        display: none;
+    }
+}

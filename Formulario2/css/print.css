@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* Hoja de estilos que utilizamos para cambiar el color
+del h1 y el h2 en el modo de impresión
+*/
+
+@import url("styles.css");
+
+@media print {
+    h1, h2 {
+        color: blue;
+    }
+
+    .mobil {
+        display: none;
+    }
+}
+
+

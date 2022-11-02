@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "PoorStory-Regular";
+    src: url("./../fuentes/PoorStory-Regular.ttf");
+}
+
+/* ----------------------------------------------------------------
+Project: Aplicación ejemplo Innterface Web
+Asigned to: AJota
+
+[TABLA DE CONTENIDOS]
+
+1. header
+2. nav (ul, a)
+3. div (p)
+4. footer
+
+[CÓDIGOS DE COLOR]
+
+header : rgb(195, 239, 194)
+nav : rgb(72, 139, 41)
+letras : white
+h1, h2 rgb(17, 101, 17)
+p : black 
+
+[FUENTES Y TIPOGRAFÍAS]
+
+Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+---------------------------------------------------------------- */
+
+/* Fuente para todo el documento */
+
+* {
+    font-family: "PoorStory-Regular";
+}
+
+/* Header */
+
+header {
+    background-color: rgb(195, 239, 194);
+    color: white;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    font-family: PoorStory;
+}
+
+h1, h2 {
+    color: rgb(17, 101, 17);
+}
+
+/* Lista, li */
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: rgb(72, 139, 41);
+    padding: 1%;
+    margin:auto
+}
+
+/* Accediendo con selectores a cada hijo de la lista y modificando su background color */
+
+ul li:first-child {
+    background-color: black;
+}
+ul li:nth-child(2) {
+    background-color: rgb(52, 51, 51);
+}
+ul li:nth-child(3) {
+    background-color: rgb(110, 109, 109);
+}
+ul li:last-child {
+    background-color: rgb(189, 185, 185);
+}
+
+/* Enlaces */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: blue;
+}
+
+/* Añadiendo el icono con pseudoelemento */
+
+a::after{
+    margin-left: 5px;
+    content: "🔽";
+}
+
+/* Elementos contenidos en los DIV */
+
+div {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+/* Parráfos de texto */
+
+p {
+    border: 2px solid black;
+    border-radius: 10%;
+    border-style: groove;
+    padding: 5%;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(195, 239, 194);
+    color: white;
+    text-align: center;
+    padding: 2%;
+    margin: auto;
+}
+
+.mobile {
+    display: none;
+}
+
+
+
+
+
+
