@@ -1,0 +1,53 @@
+/*
+Css con grid de nuestro archivo index.html
+*/
+
+* {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 8px;
+}
+.container {
+    display: grid;
+    grid-template-rows: 50px 150px 50px;
+    grid-gap: 20px;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    text-align: left;
+}
+
+header {
+    grid-column: 1 / 13;
+    grid-row: 1;
+    background-color: gray;
+    padding: 15px 10px;
+}
+
+nav {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background-color: rgb(60, 60, 60);
+    padding: 15px 10px;
+}
+
+article {
+    grid-column: 4 / 8;
+    grid-row: 2;
+    background-color: rgb(60, 60, 60);
+    padding: 15px 10px;
+}
+
+aside {
+    grid-column: 8 / 13;
+    background: rgb(207, 207, 207);
+    padding: 15px 10px;
+}
+
+footer {
+    grid-column: 1 / 13;
+    grid-row: 3;
+    background-color: gray;
+    padding: 15px 10px;
+}
+
