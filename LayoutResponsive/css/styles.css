@@ -1,0 +1,95 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+}
+
+header {
+    grid-column: 1 / 13;
+    grid-row: 1;
+    border: solid 2px green;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+nav {
+    grid-column: 1 / 13;
+    grid-row: 2;
+    border: solid 2px hotpink;
+    border-radius: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    color: black;
+    padding: 0.2em;
+}
+
+ul li:last-child {
+    color: blue;
+}
+
+ul li:nth-child(5) {
+    color: blue;
+}
+
+section {
+    grid-column: 1 / 9;
+    grid-row: 3;
+    border: solid 2px darkblue;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+article {
+    border: solid 2px skyblue;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+article section {
+    border: solid 2px hotpink;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.DA {
+    grid-column: 9 / 13;
+    grid-row: 3;
+    border: solid 2px yellow;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+   
+}
+
+.DA aside {
+    border: solid 2px skyblue;
+    border-radius: 10px;
+    padding: 2%;
+    height: 100px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+footer {
+    grid-column: 1 / 13;
+    grid-row: 4;
+    border: solid 2px yellow;
+    border-radius: 10px;
+    padding: 2%;
+}
