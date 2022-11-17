@@ -10,12 +10,9 @@
     Geneva, Verdana, sans-serif;
 
 ---Colores---
-    green 
-    hotpink
-    blue
-    black
-    skyblue
-    yellow  
+    rgb(83, 104, 148)
+    rgb(219, 232, 240)
+    rgb(223, 72, 63)
 */
 
 /*Creamos una clase container que contiene todos nuestros elementos*/
@@ -46,17 +43,20 @@ header {
     height: 5em;
 }
 
+/*Estableciendo la imagen lupa al lado del buscador*/
 .lupa {
     width: 1em;
     height: 1em;
 }
 
+/*Establecemos el input del buscador*/
 input {
     width: 15em;
     height: 2em;
     border-radius: 10px;
     border: solid 2px rgb(223, 72, 63);
 }
+
 /*Creamos nuestra barra de navegación*/
 nav {
     grid-column: 1 / 3;
@@ -78,26 +78,28 @@ li {
     font-size: 1.2em;
 }
 
+/*Seleccionamos el primer hijo de la lista para aplicar un margen
+y que se centre*/
 li:first-child {
     margin-left: auto;
 }
 
 /*Utilizamos un selector de hijo para estos 2 elementos de la lista
-y desplazarlo a la derecha, para comprobar que 
-funciona cambiamos el color, por ejemplo*/
+y desplazarlo a la derecha*/
 ul li:nth-child(5) {
     margin-left: auto;
 }
 
+/*Damos un poco de padding para que no esté pegado al borde del nav*/
 ul li:last-child {
     padding-right: 1%;
 }
 
+/*Usamos un selector hover que cambia de color al pasar por la lista del nav*/
 ul li:hover {
     font-size: 1.3em;
     color: rgb(223, 72, 63);
 }
-
 
 /*Creamos un section para agrupar todos nuestros article*/
 section {
@@ -105,6 +107,17 @@ section {
     grid-row: 3;
     text-align: center;
     margin: 0%;
+}
+
+/*Seleccionamos el h1 del section para colorearlo*/
+section h1 {
+    color: rgb(223, 72, 63);
+}
+
+/*Seleccionamos el header de nuestro section para centrarlo*/
+section header {
+    display: flex;
+    justify-content: center;
 }
 
 /*Establecemos las propiedades de nuestros article*/
@@ -120,10 +133,6 @@ article {
 
 }
 
-article header {
-    text-align: center;
-}
-
 /*Accedemos al section dentro de nuestros article porque queremos establecer 
 propiedades diferentes al section global*/
 article section {
@@ -133,6 +142,7 @@ article section {
     padding: 1%;
 }
 
+/*Definiendo las propiedades de las imagenes de nuestros articles*/
 .corr {
     width: 6em;
     height: 7em;
@@ -161,16 +171,17 @@ article section {
     padding: 2%;
     height: auto;
     width: 80%;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
-.calendar {
-    width: 4em;
-    height: 4em;
+/*Definiendo las propiedades de las imágenes de nuestro aside*/
+.fotosAside {
+    width: 3em;
+    height: 3em;
 }
 
-/*Por último definimos el footer de nuestro layout*/
+/*Definimos el footer de nuestro layout*/
 footer {
     grid-column: 1 / 3;
     grid-row: 4;
@@ -183,16 +194,19 @@ footer {
     color: rgb(219, 232, 240);
 }
 
+/*Establecemos la distribución de los elementos de nuestro footer*/
 footer div {
     display: flex;
     justify-content: space-between;
    padding: auto;
 }
 
+/*Configuración de los parrafos*/
 p {
     margin: 1em;
 }
 
+/*Estableciendo la imágen de nuestro footer*/
 .rrss {
     width: 10em;
     height: 6em;
@@ -202,6 +216,7 @@ p {
 resolución mínima y máxima*/
 @media (min-width: 376px) and (max-width: 666px) {
 
+    /*Disminuimos el tamaño del logo e imput para que se ajuste mejor*/
     .logo {
         width: 5em;
         height: 2em;
@@ -212,6 +227,8 @@ resolución mínima y máxima*/
         height: 2em;
     }
 
+    /*Ocupamos todo el ancho de la pagina con el section, desplazamos abajo al div con el aside
+    ocupando todo el ancho tambien y definimos una nueva fila para el footer*/
     section {
         grid-column: 1 / 3;
         grid-row: 3;
