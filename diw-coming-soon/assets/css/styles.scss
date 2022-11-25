@@ -193,8 +193,12 @@ html {
   * Crear los siguientes h restando 6px a cada uno.
   * Utilizar un bucle para crear los h de forma automática
   */
+
+  //Importamos las variables del archivo _variables
   @import "_variables";
   
+  /*creamos un bucle desde 1 a 6 donde creamos los h1,h2,h3, etc 
+  disminuyendo su tamaño desde 36 px hasta 6px*/
   @for $var from 1 to 7 {
       h#{$var}{
           font-size: #{$sizeH};
@@ -250,6 +254,8 @@ html {
   * Usar anidamientos de la forma más optima posible
   */
   
+  // Anidamos todas las propiedades de .w3 como son table, bordered, striped, así como sus propios anidamientos tr, tbody, etc.
+  // utilizamos tambien variables creadas para el color 
   .w3-table-all {
     border: 1px solid $grismedio;
   
@@ -582,6 +588,9 @@ html {
   * Utilizar un bucle para crear los s1 de forma automática
   */
   
+  //Creamos un bucle para .w3-col desde 1 a 12 donde aumentamos el ancho por el número de variable a la que nos referimos
+  // empezando en 8,33%
+  
   @for $var from 1 to 13 {
     .w3-col.s#{$var}{
         width: #{$ancho*$var};
@@ -598,6 +607,9 @@ html {
   *  
   */
   
+  // Creamos unas mediaquerys a 601px y a 993px con un bucle dentro desde 1 a 12 donde repetimos el proceso 
+  // del apartado anterior 
+
   @media (min-width: 601px) {
     @for $var from 1 to 13 {
         @if $var == 3 {
@@ -797,9 +809,11 @@ html {
   * Crea una clase que se llame .w3-display con position: absolute y con @extend crea una especialización de cada una de las siguientes
   * Utiliza un mixin para no repetir left:0 y top:0 en todos los display donde sea requerido.
   */
-  
+
+  //Importamos desde el archivo _mixins 
   @import "_mixins";
   
+  // Anidamos en .w3-display todas las posiciones llamando a los mixins
   .w3-display{
       &-topleft{
         @include posABS();
@@ -949,6 +963,7 @@ html {
   * Utilizar anidamiento para el .w3-animate
   */
   
+  //anidamos en .w3-animate unas propiedades relativas a animaciones 
   .w3-animate{
     &-fading{
         animation: fading 10s infinite;
@@ -1101,9 +1116,11 @@ html {
   * DIW: Parte 8: 
   * Utilizar variables para ir incrementando de forma dinámica el font-size
   */
-  @each $nombre,$fuente in $sizefont {
-    .w3#{$nombre}{
-        font-size: $fuente !important;
+
+  //creamos un bucle each para cada nombre y tamaño de la fuente
+  @each $name,$font in $sizefont {
+    .w3#{$name}{
+        font-size: $font !important;
     }
   }
   /*
@@ -1130,9 +1147,11 @@ html {
   * para que no se repita el código
   */
   
+  // anidamos en .w3-border un mixin que tenemos para el tamaño de los bordes
   .w3-border{
     @include bordes(1px);
   }
+  // creamos un ear que para cada posición establezca el tamaño de los bordes
   @each $var in top,bottom,left,right {
     .w3-border-#{$var}{
         @include bordes(1px);
@@ -1179,6 +1198,7 @@ html {
   * Utiliza un bucle y variables para construir los padding dinámicamente.
   */
   
+  // creamos un each que para cada tañano, estableciendo los padding de .w3-padding en ellos
   @each $var in 16,24,32,48,64 {
     .w3-padding-#{$var}{
         padding-top: #{$var}px !important;
@@ -1193,7 +1213,8 @@ html {
   * DIW: Parte 11: 
   * Utiliza un bucle y variables para construir los padding dinámicamente.
   */
-  
+
+  // repetimos los pasos del punto anterior pero para los .w3-padding-top   
   @each $var in 64,48,32,24 {
     .w3-padding-top-#{$var}{
         padding-top: #{$var}px !important;
@@ -1227,8 +1248,7 @@ html {
   * Usa también anidamiento para los pseudoelementos
   */
   
-  //Mixin colores: Le paso como parametro el color y el background color.
-  
+  // en este apartado llamamos a los diferentes mixin que hemos creado para los colores, bordes, etc.
   .w3-amber{
     @include colors($dark,#ffc107);
   }
@@ -1395,7 +1415,7 @@ html {
     @include borderColors(#00bcd4);
   }
   }
-
+/*-----------------------------------------FIN MIXIN PARTE 12--------------------------------------------------------*/
   .w3-blue-grey,
   .w3-hover-blue-grey:hover,
   .w3-blue-gray,

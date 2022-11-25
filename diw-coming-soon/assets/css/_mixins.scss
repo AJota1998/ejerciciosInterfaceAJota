@@ -1,22 +1,31 @@
+// mixin para establecer la position absolute
 @mixin posABS(){
     position: absolute;
 }
+
+// mixin para establecer la positicon top left
 @mixin pos($top, $left) {
     left: $left;
     top: $top;
 }
 
+// mixin para establecer el grosor de un borde con un color por defecto 
 @mixin bordes($px) {
     border: #{$px} solid #ccc !important;
 }
 
+// mixin para estabblecer color y el background color  
 @mixin colors($color,$Fondo) {
     color: #{$color} !important;
     background-color: #{$Fondo} !important;
 }
+
+// mixin para establecer el color de un borde
 @mixin borderColors($colorBorde) {
     border-color: #{$colorBorde} !important;
 }
+
+// mixin para establecer el color de un elemento 
 @mixin color($color) {
     color: #{$color} !important;
 }
