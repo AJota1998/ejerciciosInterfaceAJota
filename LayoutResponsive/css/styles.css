@@ -182,8 +182,9 @@ article section {
 
 /*Clase para la imágen del banner*/
 .banner {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 /*Definimos el footer de nuestro layout*/
