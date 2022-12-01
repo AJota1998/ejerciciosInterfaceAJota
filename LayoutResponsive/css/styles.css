@@ -71,6 +71,25 @@ ul {
     justify-content: center;
 }
 
+/*accedemos al ul que contiene los li*/
+ul div {
+    display: flex;
+    justify-content: center;
+    margin: 0% 1% 0% 1%;
+}
+
+/*accedemos a las imagenes del menu*/
+nav ul img {
+    width: 20px;
+    height: 20px;
+}
+
+/*clase para separar el menu del login*/
+.menu {
+    margin-left: 30%;
+    margin-right: 0%;
+}
+
 /*Establecemos las propiedades de los elementos de la lista*/
 li {
     list-style: none;
@@ -143,9 +162,15 @@ article section {
     padding: 1%;
 }
 
+/*Selectores para los iconos de derechos de autor*/
+article div a img {
+    width: 20px;
+    height: 20px;
+}
+
 /*Definiendo las propiedades de las imagenes de nuestros articles*/
 .corr {
-    width: 40%;
+    width: 35%;
     height: 40%;
     margin: auto;
 }
@@ -227,6 +252,10 @@ resolución mínima y máxima*/
     .logo {
         width: 5em;
         height: 2em;
+    }
+
+    .menu {
+        margin-left: 0%;
     }
 
     input {
