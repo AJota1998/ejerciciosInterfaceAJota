@@ -18,9 +18,9 @@
 /*Creamos una clase container que contiene todos nuestros elementos*/
 .container {
     display: grid;
-   
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0%;
+    text-align: justify;
 }
 
 /*Creamos nuestro header*/
@@ -41,6 +41,7 @@ header {
 .logo {
     width: 12em;
     height: 5em;
+    color: red;
 }
 
 /*Estableciendo la imagen lupa al lado del buscador*/
@@ -144,8 +145,8 @@ article section {
 
 /*Definiendo las propiedades de las imagenes de nuestros articles*/
 .corr {
-    width: 6em;
-    height: 7em;
+    width: 40%;
+    height: 40%;
     margin: auto;
 }
 
@@ -166,8 +167,6 @@ article section {
 
 /*Establecemos las propiedades de los aside laterales*/
 .DA aside {
-    border: solid 2px rgb(223, 72, 63);
-    border-radius: 10px;
     padding: 2%;
     height: auto;
     width: 80%;
@@ -181,11 +180,18 @@ article section {
     height: 3em;
 }
 
+/*Clase para la imágen del banner*/
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
 /*Definimos el footer de nuestro layout*/
 footer {
     grid-column: 1 / 3;
     grid-row: 4;
     border-radius: 0px 0px 10px 10px;
+    margin-top: 2%;
     padding: 1%;
     display: flex;
     flex-direction: column;
