@@ -18,6 +18,7 @@
 
         <div class="content">
             <button id="myBtn" onclick="eliminar()">Inicio</button>
+            <h2 id="h2">¡Corre con nosotros!</h2>
         </div> 
 
         <header>
@@ -133,10 +134,12 @@
         
         let video = document.getElementById("myVideo");
         let btn = document.getElementById("myBtn");
+        let h2 = document.getElementById("h2");
         
         function eliminar() {
-            video.className = "videoNone"
+            video.className = "videoNone";
             btn.className = "videoNone";
+            h2.className = "videoNone";
         }
         
     </script>
