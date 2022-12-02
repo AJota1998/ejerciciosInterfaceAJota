@@ -15,12 +15,75 @@
     rgb(223, 72, 63)
 */
 
+body {
+    margin: 0.1%;
+}
+
 /*Creamos una clase container que contiene todos nuestros elementos*/
 .container {
     display: grid;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0%;
     text-align: justify;
+}
+
+/*Posicionamos el video*/
+ #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*Creamos una clase para ocultar cuando se pulse el boton*/
+.videoNone {
+    display: none;
+}
+    
+/*Ajustamos el boton*/
+.content {
+    position: fixed;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+    
+/*Establecemos las propiedades del boton*/
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: rgb(174, 204, 223);
+    color: white;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: rgb(83, 104, 148);
+    color: white;
+} 
+
+/*Añadiendo la animación a nuestro botón*/
+button {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count:initial;
+}
+
+@keyframes slidein {
+    
+    from {
+        margin-left: 100%;
+        width: 20%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 20%;
+    }
 }
 
 /*Creamos nuestro header*/
@@ -33,15 +96,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(83, 104, 148);
+    background-color: rgb(51, 64, 91);
     color: rgb(219, 232, 240);
+    
+}
+
+header h1 {
+    color: rgb(174, 204, 223);
+
+    text-shadow: 2px 1px 4px rgb(223, 72, 63);
 }
 
 /*Estableciendo la imagen del logo*/
 .logo {
     width: 12em;
     height: 5em;
-    color: red;
+    filter: invert(22%) sepia(86%) saturate(1936%) hue-rotate(343deg) brightness(125%) contrast(76%);
 }
 
 /*Estableciendo la imagen lupa al lado del buscador*/
@@ -55,14 +125,15 @@ input {
     width: 15em;
     height: 2em;
     border-radius: 10px;
-    border: solid 2px rgb(223, 72, 63);
+    border: solid 2px rgb(51, 64, 91);
 }
 
 /*Creamos nuestra barra de navegación*/
 nav {
     grid-column: 1 / 3;
     grid-row: 2;
-    background-color: rgb(51, 64, 91);
+    background-color: rgb(83, 104, 148);
+    box-shadow: 0px 10px 7px -4px rgba(174,204,223,1);
 }
 
 /*Disponemos con flex en el centro a los elementos que contiene la lista*/
@@ -86,8 +157,18 @@ nav ul img {
 
 /*clase para separar el menu del login*/
 .menu {
-    margin-left: 30%;
+    margin-left: 20%;
     margin-right: 0%;
+   
+}
+
+.login {
+    padding: 1% 2% 1% 2%;
+    background-color: rgb(223, 72, 63);
+    color: white;
+    border-radius: 5px;
+    border: solid 2px rgb(223, 72, 63);
+    margin: 1%;
 }
 
 /*Establecemos las propiedades de los elementos de la lista*/
@@ -98,27 +179,9 @@ li {
     font-size: 1.2em;
 }
 
-/*Seleccionamos el primer hijo de la lista para aplicar un margen
-y que se centre*/
-li:first-child {
-    margin-left: auto;
-}
-
-/*Utilizamos un selector de hijo para estos 2 elementos de la lista
-y desplazarlo a la derecha*/
-ul li:nth-child(5) {
-    margin-left: auto;
-}
-
-/*Damos un poco de padding para que no esté pegado al borde del nav*/
-ul li:last-child {
-    padding-right: 1%;
-}
-
 /*Usamos un selector hover que cambia de color al pasar por la lista del nav*/
 ul li:hover {
-    font-size: 1.3em;
-    color: rgb(223, 72, 63);
+    color: rgb(51, 64, 91);
 }
 
 /*Creamos un section para agrupar todos nuestros article*/
@@ -148,7 +211,7 @@ article {
     flex-direction: column;
     justify-content: space-between;
     height: 370px;
-    margin: 1em 1em;
+    margin: 2em 2em;
     text-align: center;
 
 }
@@ -224,6 +287,7 @@ footer {
     align-items: center;
     background-color: rgb(223, 72, 63);
     color: rgb(219, 232, 240);
+    box-shadow: 0px -12px 7px -8px rgba(174,204,223,1);
 }
 
 /*Establecemos la distribución de los elementos de nuestro footer*/
@@ -252,6 +316,10 @@ resolución mínima y máxima*/
     .logo {
         width: 5em;
         height: 2em;
+    }
+
+    video, button {
+        display: none;
     }
 
     .menu {

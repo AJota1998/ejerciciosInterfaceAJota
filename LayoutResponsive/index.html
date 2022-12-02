@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Responsive</title>
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
 
     <div class="container">
+    
+        <video autoplay muted loop id="myVideo">
+            <source src="img/cabecera.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <button id="myBtn" onclick="eliminar()">Inicio</button>
+        </div> 
 
         <header>
             <img class="logo" src="img/logo.svg" alt="Logo formato svg">
@@ -41,8 +50,8 @@
                     </div>
                 </div>
                 <div class="menu">
-                    <li>Login</li>
-                    <li>Registro</li>
+                    <li class="login">Login</li>
+                    <li class="login">Registro</li>
                 </div>
             </ul>
         </nav>
@@ -119,6 +128,18 @@
         </footer>
 
     </div>
+
+    <script>
+        
+        let video = document.getElementById("myVideo");
+        let btn = document.getElementById("myBtn");
+        
+        function eliminar() {
+            video.className = "videoNone"
+            btn.className = "videoNone";
+        }
+        
+    </script>
     
 </body>
 </html>
