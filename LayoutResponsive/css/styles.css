@@ -68,7 +68,8 @@ body {
 
 /*Añadiendo la animación a nuestro botón*/
 h2 {
-    color: rgb(223, 72, 63);
+    color: white;
+    font-weight: bolder;
     animation-duration: 3s;
     animation-name: slidein;
     animation-iteration-count:initial;
@@ -292,7 +293,7 @@ footer {
 footer div {
     display: flex;
     justify-content: space-between;
-   padding: auto;
+    padding: auto;
 }
 
 /*Configuración de los parrafos*/
