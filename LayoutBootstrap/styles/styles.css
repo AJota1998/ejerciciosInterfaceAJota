@@ -1,0 +1,18 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#encabezado {
+   text-align: center;
+}
+
+#logo {
+    width: 25%;
+    height: 25%;
+    filter: invert(22%) sepia(86%) saturate(1936%) hue-rotate(343deg) brightness(125%) contrast(76%);
+}
+
+#lupa {
+    width: 3%;
+    height: 3%;
+}
