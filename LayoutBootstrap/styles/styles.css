@@ -4,15 +4,39 @@
 
 #encabezado {
    text-align: center;
+   background-color: rgba(13,110,253,255);
+   display: flex;
+   justify-content: space-between;
+}
+
+#encabezado h2 {
+    margin-top: 2%;
+    color: rgb(34, 34, 34);
 }
 
 #logo {
-    width: 25%;
-    height: 25%;
-    filter: invert(22%) sepia(86%) saturate(1936%) hue-rotate(343deg) brightness(125%) contrast(76%);
+    width: 15%;
+    height: 15%;
+    margin-bottom: 1%;
+    filter: invert(10%) sepia(12%) saturate(18%) hue-rotate(350deg) brightness(101%) contrast(92%);
+}
+
+#avatar {
+    width: 9%;
+    height: 9%;
+}
+
+#menu {
+    color: rgba(13,110,253,255);
 }
 
 #lupa {
-    width: 3%;
-    height: 3%;
+   display: flex;
+   justify-content: left;
+}
+
+input {
+    border-radius: 5px;
+    border: solid 2px;
+    border-color: rgba(13,110,253,255);
 }
