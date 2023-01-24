@@ -2,6 +2,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 #encabezado {
    text-align: center;
 }
@@ -12,9 +13,8 @@
 }
 
 #logo {
-    margin-top: 1%;
-    width: 75%;
-    height: 75%;
+    height: 70%;
+    width: 70%;
     filter: invert(29%) sepia(94%) saturate(2727%) hue-rotate(209deg) brightness(100%) contrast(100%);
 }
 
@@ -30,7 +30,7 @@
 #lupa {
    display: flex;
    justify-content: left;
-   margin-top: 0.7%;
+   
 }
 
 input {
@@ -105,5 +105,32 @@ img {
 h5 {
     margin-top: 1%;
 }
+
+button {
+    margin: 10px;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color: #555; 
+    opacity: 0.5;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 30px; 
+    font-size: 13px; 
+  }
+  
+  #myBtn:hover {
+    background-color: rgba(13,110,253,255);
+    opacity: 1;
+  }
+
 
 
