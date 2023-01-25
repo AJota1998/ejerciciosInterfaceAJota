@@ -125,12 +125,64 @@ button {
     padding: 15px; 
     border-radius: 30px; 
     font-size: 13px; 
-  }
+}
   
   #myBtn:hover {
     background-color: rgba(13,110,253,255);
     opacity: 1;
-  }
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tituloFooter {
+    text-decoration: underline;
+}
+
+h4 {
+    text-align: center;
+}
+
+#formRegistro div {
+    width: 60%;
+}
+
+#formRegistro div input {
+    width: 40%;
+}
+
+select {
+    border-radius: 5px;
+    border: solid 2px;
+    border-color: rgba(13,110,253,255);
+    width: 30%;
+}
+
+textarea {
+    width: 50%;
+    border-radius: 5px;
+    border: solid 2px;
+    border-color: rgba(13,110,253,255);
+}
+
+#userIg {
+    display: flex;
+    justify-content: left;
+}
+
+span {
+    width: 65%;
+}
+
 
 
 
