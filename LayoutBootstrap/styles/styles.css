@@ -33,10 +33,14 @@
    
 }
 
-input {
+input, select, textarea {
     border-radius: 5px;
     border: solid 2px;
     border-color: rgba(13,110,253,255);
+}
+
+.inp {
+    height: 2rem
 }
 
 footer {
@@ -136,8 +140,8 @@ form div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 2%;
-    margin-bottom: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 a {
@@ -150,37 +154,6 @@ a {
 
 h4 {
     text-align: center;
-}
-
-#formRegistro div {
-    width: 60%;
-}
-
-#formRegistro div input {
-    width: 40%;
-}
-
-select {
-    border-radius: 5px;
-    border: solid 2px;
-    border-color: rgba(13,110,253,255);
-    width: 30%;
-}
-
-textarea {
-    width: 50%;
-    border-radius: 5px;
-    border: solid 2px;
-    border-color: rgba(13,110,253,255);
-}
-
-#userIg {
-    display: flex;
-    justify-content: left;
-}
-
-span {
-    width: 65%;
 }
 
 
