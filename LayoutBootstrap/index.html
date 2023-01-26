@@ -12,6 +12,18 @@
     <script defer src="js/index.js"></script>
 </head>
 <body>
+ 
+  <div id="divVideo" class="myvideo">
+    <h3 id="textoCerrar">Clica en cualquier parte para cerrar</h3>
+    <button onclick="eliminar()" type="button" class="btn-close" aria-label="Close" id="botonCerrar">
+      <video autoplay muted loop id="myVideo">
+        <source src="img/cabecera.mp4" type="video/mp4">
+      </video>
+    </button>
+  </div>
+ 
+
+  <div>
 
     <div class="container-fluid">
       <div class="row" id="encabezado">
@@ -303,9 +315,21 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          
+            <div class="card" id="cardLateral">
+              <h6>Maratón Benéfica Valenciana</h6>
+              <div class="card-body" id="videoLateral">
+                <video autoplay muted loop id="myVideo2">
+                  <source src="img/relevos.mp4" type="video/mp4">
+                </video>
+                <p>Disputada la XVLI edición de la maratón valenciana en beneficio de las personas sin hogar, 
+                  la cual contó con la masiva participación de los ciudadanos de la misma. En torno a 10.000 personas 
+                  corrieron por la causa.
+                </p>
+              </div>
+            </div>
         </div>
       </div>
-    </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">
       <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="-1 0 18 18">
@@ -349,6 +373,9 @@
           </div>
         </div>
       </footer>
+
+  </div>
+    
     
 
 </body>

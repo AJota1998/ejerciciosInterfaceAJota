@@ -13,3 +13,9 @@ function topFunction() {
   document.body.scrollTop = 0; // Para safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 }
+
+
+function eliminar() {
+  let video = document.getElementById("divVideo")
+  video.className = "cerrar";
+}
