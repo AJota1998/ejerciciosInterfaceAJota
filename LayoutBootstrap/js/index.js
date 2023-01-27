@@ -14,7 +14,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 }
 
-
+//Eliminar el video del inicio
 function eliminar() {
   let video = document.getElementById("divVideo")
   video.className = "cerrar";
