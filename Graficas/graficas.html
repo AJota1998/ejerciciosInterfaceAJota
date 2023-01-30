@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div>
+        <canvas id="grafica_lineas"></canvas>
+    </div>
+
+    <div>
+        <canvas id="grafica_quesitos"></canvas>
+    </div>
+
+
+    
+</body>
+
+<script>
+
+  const grafica_lineas = document.getElementById('grafica_lineas');
+
+  new Chart(grafica_lineas, {
+    type: 'line',
+    data: {
+      labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto',
+                'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+      datasets: [{
+        label: '€ por Mes',
+        data: [45897, 37989, 41789, 39912, 48912, 50956, 41955, 32978, 51023, 47765, 42998, 39923],
+        borderWidth: 1
+      }]
+    },
+    options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        },
+
+        maintainAspectRatio: true,
+
+        plugins: {
+            title: {
+                display: true,
+                text: 'Gráfica de Ingresos del año 2022',
+                padding: {
+                    top:10,
+                    bottom:10,
+                }
+            },
+            subtitle: {
+                display: true,
+                text: 'Cantidad en € por meses'
+            }
+        }
+    }
+});
+
+
+const grafica_quesitos = document.getElementById('grafica_quesitos');
+
+new Chart(grafica_quesitos, {
+  type: 'pie',
+  data: {
+    labels: ['5k', '10k', '21k', '42k'],
+    datasets: [{
+      label: 'Inscritos',
+      data: [60043, 37880, 44543, 32734],
+      borderWidth: 1,
+      backgroundColor: [
+      'rgb(21,31,232)',
+      'rgb(89,96,246',
+      'rgb(247,5,42)',
+      'rgb(247,108,129)'
+      ] 
+    }]
+  },
+  options: {
+      scales: {
+          y: {
+          beginAtZero: true
+          }
+      },
+
+      maintainAspectRatio: true,
+
+      plugins: {
+          title: {
+              display: true,
+              text: 'Gráfica de Inscritos por categoría',
+              padding: {
+                  top:10,
+                  bottom:10,
+              }
+          },
+          subtitle: {
+              display: true,
+              text: 'Inscritos por categorías'
+          }
+      }
+  }
+});
+
+</script>
+
+</html>
