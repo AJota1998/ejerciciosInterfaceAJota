@@ -148,7 +148,9 @@ const grafica_horizontal = document.getElementById('grafica_horizontal');
 new Chart(grafica_horizontal, {
 type: 'bar',
 data: {
-  labels: ['Junio','Mayo','Enero','Septiembre','Marzo','Octubre','Noviembre','Abril','Diciembre','Febrero','Julio','Agosto'],
+  labels: ['M. Sevillana','C. Valencia','C. Málaga',
+          'M. Madrileña','M.M. Murcia','C. Barcelona','M. Getafe',
+          'M.M. Parla','M. San Fermín','C.N. Vallecas','M. Extremeña','C. Almería'],
   datasets: [{
     axis: 'y',
     label: 'Número de inscritos por mes',
