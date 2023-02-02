@@ -39,6 +39,23 @@ h1 {
     margin-left: 1%;
 }
 
+#alertas {
+    width: 15%;
+    height: 40%;
+    margin-top: 1%;
+    margin-left: 10%;
+    background-color: rgb(161, 28, 28);
+}
+
+#notificaciones {
+    display: flex;
+    justify-content: center;
+}
+
+#notificaciones p {
+    margin-top: 1%;
+}
+
 h5 {
     text-align: center;
 }
@@ -54,6 +71,19 @@ h5 {
     margin-bottom: 2%;
     border-radius: 5px;
 }
+
+#acordeon1 {
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
+#acordeon2 {
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
 
 footer {
     background-color: rgb(50, 48, 48);

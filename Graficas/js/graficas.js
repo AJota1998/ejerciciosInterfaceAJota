@@ -198,3 +198,87 @@ options: {
     maintainAspectRatio: false
 }
 });
+
+const grafica_menos = document.getElementById('grafica_menos');
+
+new Chart(grafica_menos, {
+type: 'bar',
+data: {
+  labels: ['C. Huévar', 'M.M Sanlucar', 'C. San Juan', 'C. Sotillo', 'C. Avilés'],
+  datasets: [{
+    axis: 'y',
+    label: 'Número de inscritos por evento',
+    data: [123, 345, 564, 776, 887],
+    fill: false,
+    backgroundColor: [
+        'rgb(255,153,153)',
+        'rgb(255,102,102)',
+        'rgb(255,51,51)',
+        'rgb(204,0,0)',
+        'rgb(153,0,0)',
+    ],
+    borderWidth:1,
+    borderColor: 'rgb(0,0,0)',
+    
+  }]
+},
+options: {
+    indexAxis: 'y',
+
+    plugins: {
+        title: {
+            display: true,
+            text: 'Ranking de Inscritos por eventos',
+            padding: {
+                top:10,
+                bottom:10,
+            }
+        },
+        subtitle: {
+            display: true,
+            text: 'Inscritos por evento'
+        }
+    },
+    responsive: true,
+    maintainAspectRatio: false
+}
+});
+
+const grafica_anios = document.getElementById('grafica_anios');
+
+new Chart(grafica_anios, {
+    type: 'line',
+  data: {
+    labels: ['2017,2018,2019','2020','2021','2022'],
+    datasets: [{
+      label: '€ por Mes',
+      data: [89,140,165,200, 250, 270],
+      borderWidth: 4,
+      borderColor: 'rgb(102,0,51)'
+    }]
+  },
+  options: {
+      scales: {
+          y: {
+          beginAtZero: true
+          }
+      },
+
+      plugins: {
+          title: {
+              display: true,
+              text: 'Gráfica de Ingresos del año 2022',
+              padding: {
+                  top:10,
+                  bottom:10
+              }
+          },
+          subtitle: {
+              display: true,
+              text: 'Cantidad en € por meses'
+          }
+      },
+      responsive: true,
+      maintainAspectRatio: false
+  }
+});
