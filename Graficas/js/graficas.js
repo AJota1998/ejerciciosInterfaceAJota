@@ -11,7 +11,7 @@ new Chart(grafica_lineas, {
       label: '€ por Mes',
       data: [45897, 37989, 41789, 39912, 48912, 50956, 41955, 32978, 51023, 47765, 42998, 39923],
       borderWidth: 4,
-      borderColor: 'rgb(12, 197, 149)'
+      borderColor: 'rgb(208,8,8)'
     }]
   },
   options: {
@@ -34,7 +34,9 @@ new Chart(grafica_lineas, {
               display: true,
               text: 'Cantidad en € por meses'
           }
-      }
+      },
+      responsive: true,
+      maintainAspectRatio: false
   }
 });
 
@@ -63,7 +65,7 @@ data: {
       backgroundColor: [
         'rgb(136,171,247)',
       ],
-      borderWidth: 3,
+      borderWidth: 4,
       borderColor: 'rgb(8,83,243)',
       
   }
@@ -91,7 +93,9 @@ options: {
             display: true,
             text: 'Inscritos'
         }
-    }
+    },
+    responsive: true,
+    maintainAspectRatio: false
 }
 });
 
@@ -109,9 +113,9 @@ data: {
     data: [60043, 37880, 24543, 12734],
     borderWidth: 1,
     backgroundColor: [
-    'rgb(21,31,232)',
-    'rgb(89,96,246',
-    'rgb(247,5,42)',
+    'rgb(150,202,45)',
+    'rgb(255,153,51)',
+    'rgb(102,102,255)',
     'rgb(247,108,129)'
     ] ,
     borderWidth:2,
@@ -137,7 +141,9 @@ options: {
             display: true,
             text: 'Inscritos por categorías'
         }
-    }
+    },
+    responsive: true,
+    maintainAspectRatio: false
 }
 });
 
@@ -150,25 +156,21 @@ type: 'bar',
 data: {
   labels: ['M. Sevillana','C. Valencia','C. Málaga',
           'M. Madrileña','M.M. Murcia','C. Barcelona','M. Getafe',
-          'M.M. Parla','M. San Fermín','C.N. Vallecas','M. Extremeña','C. Almería'],
+          'M.M. Parla'],
   datasets: [{
     axis: 'y',
-    label: 'Número de inscritos por mes',
-    data: [76933,70912,65343,64222,63854,63091,62987,59094,58434,57098,44987,39876],
+    label: 'Número de inscritos por evento',
+    data: [76933,70912,65343,61888,59094,56434,44987,39876],
     fill: false,
     backgroundColor: [
-        'rgb(111,247,5)',
-        'rgb(118,247,17)',
-        'rgb(133,246,46)',
-        'rgb(156,243,88)',
-        'rgb(168,239,113)',
-        'rgb(183,237,141)',
-        'rgb(238,136,136)',
-        'rgb(241,108,108)',
-        'rgb(241,75,75)',
-        'rgb(240,51,51)',
-        'rgb(240,37,37)',
-        'rgb(243,8,8)',
+        'rgb(40,125,125)',
+        'rgb(0,150,136)',
+        'rgb(38,166,154)',
+        'rgb(27,188,155)',
+        'rgb(103,204,142)',
+        'rgb(150,237,137)',
+        'rgb(177,255,145)',
+        'rgb(190,235,159)'
     ],
     borderWidth:1,
     borderColor: 'rgb(0,0,0)',
@@ -181,7 +183,7 @@ options: {
     plugins: {
         title: {
             display: true,
-            text: 'Ranking de Inscritos por mes',
+            text: 'Ranking de Inscritos por eventos',
             padding: {
                 top:10,
                 bottom:10,
@@ -189,8 +191,10 @@ options: {
         },
         subtitle: {
             display: true,
-            text: 'Inscritos por mes'
+            text: 'Inscritos por evento'
         }
-    }
+    },
+    responsive: true,
+    maintainAspectRatio: false
 }
 });
