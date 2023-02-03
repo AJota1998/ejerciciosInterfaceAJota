@@ -365,7 +365,7 @@ new Chart(grafica_banco, {
           },
           subtitle: {
               display: true,
-              text: 'Tipo de Eventos'
+              text: '€ en cuentas'
           }
       },
       responsive: true,
