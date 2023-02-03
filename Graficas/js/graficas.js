@@ -183,7 +183,7 @@ options: {
     plugins: {
         title: {
             display: true,
-            text: 'Ranking de Inscritos por eventos',
+            text: 'Ranking de Inscritos por evento',
             padding: {
                 top:10,
                 bottom:10,
@@ -198,6 +198,8 @@ options: {
     maintainAspectRatio: false
 }
 });
+
+/*-----Gráfica de barras horizontales acordeon----*/
 
 const grafica_menos = document.getElementById('grafica_menos');
 
@@ -228,7 +230,7 @@ options: {
     plugins: {
         title: {
             display: true,
-            text: 'Ranking de Inscritos por eventos',
+            text: 'Ranking de Inscritos por evento',
             padding: {
                 top:10,
                 bottom:10,
@@ -244,14 +246,16 @@ options: {
 }
 });
 
+/*-----Gráfica de lineas acordeón-----*/
+
 const grafica_anios = document.getElementById('grafica_anios');
 
 new Chart(grafica_anios, {
     type: 'line',
   data: {
-    labels: ['2017,2018,2019','2020','2021','2022'],
+    labels: ['2017','2018','2019','2020','2021','2022'],
     datasets: [{
-      label: '€ por Mes',
+      label: 'Eventos por año',
       data: [89,140,165,200, 250, 270],
       borderWidth: 4,
       borderColor: 'rgb(102,0,51)'
@@ -267,7 +271,7 @@ new Chart(grafica_anios, {
       plugins: {
           title: {
               display: true,
-              text: 'Gráfica de Ingresos del año 2022',
+              text: 'Gráfica de Eventos por años',
               padding: {
                   top:10,
                   bottom:10
@@ -275,10 +279,113 @@ new Chart(grafica_anios, {
           },
           subtitle: {
               display: true,
-              text: 'Cantidad en € por meses'
+              text: 'Eventos por año'
           }
       },
       responsive: true,
       maintainAspectRatio: false
   }
 });
+
+/*-----Gráfica hexagonal acordeón-----*/
+
+const grafica_hexagonal = document.getElementById('grafica_hexagonal');
+
+new Chart(grafica_hexagonal, {
+    type: 'radar',
+  data: {
+    labels: ['Carrera General', 'Media Maratón', 'Maratón', 'Carrera Benéfica', 'Carrera Nocturna', 'Carrera Popular'],
+    datasets: [{
+      label: 'Eventos por tipo',
+      data: [34,46,62,35,53,40],
+      borderWidth: 3,
+      borderColor: 'rgb(40, 122, 223)',
+    }]
+  },
+  options: {
+      scales: {
+          y: {
+          beginAtZero: true
+          }
+      },
+
+      plugins: {
+          title: {
+              display: true,
+              text: 'Gráfica de Eventos por tipo',
+              padding: {
+                  top:10,
+                  bottom:10
+              }
+          },
+          subtitle: {
+              display: true,
+              text: 'Tipo de Eventos'
+          }
+      },
+      responsive: true,
+      maintainAspectRatio: false
+  }
+});
+
+/*-----Gráfica bancaria-----*/
+
+const grafica_banco = document.getElementById('grafica_banco');
+
+new Chart(grafica_banco, {
+    type: 'polarArea',
+  data: {
+    labels: ['Ing Direct', 'Santander', 'La Caixa', 'CajaRural'],
+    datasets: [{
+      label: 'Eventos por tipo',
+      data: [6765,23123,11345,17456],
+      backgroundColor: [
+        'rgba(255,98,0,255)',
+        'rgba(236,0,0,255)',
+        'rgba(0,126,174,255)',
+        'rgba(0,122,83,255)'
+      ]
+    }]
+  },
+  options: {
+      scales: {
+          y: {
+          beginAtZero: true
+          }
+      },
+
+      plugins: {
+          title: {
+              display: true,
+              text: 'Gráfica de cuentas Bancarias',
+              padding: {
+                  top:10,
+                  bottom:10
+              }
+          },
+          subtitle: {
+              display: true,
+              text: 'Tipo de Eventos'
+          }
+      },
+      responsive: true,
+      maintainAspectRatio: false
+  }
+});
+
+/*-----Botón-----*/
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // Para safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+}

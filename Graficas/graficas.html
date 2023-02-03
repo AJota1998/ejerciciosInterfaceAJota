@@ -14,13 +14,16 @@
 </head>
 <body>
 
+    <!--Clase container-fluid para header, nav, migas de pan y mensajes-->
     <div class="container-fluid">
+        <!--Header-->
         <header class="row">
             <div class="col-lg-12">
                 <h1>weRunning</h1>
             </div>
         </header>
         <div class="row">
+            <!--nav-->
             <nav class="navbar navbar-expand-md" id="fondonav">
                 <div class="container-fluid">
                     <button id="menuhamburguesa" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,6 +68,7 @@
                 </div>
             </nav>
         </div>
+        <!--migas de pan-->
         <div class="row">
             <nav aria-label="breadcrumb" class="col-lg-9 col-sm-6">
                 <ol class="breadcrumb" id="migas">
@@ -72,15 +76,15 @@
                     <li class="breadcrumb-item" aria-current="page">Gráficos</li>
                 </ol>
             </nav>
+            <!--mensajes-->
             <div id="notificaciones" class="col-lg-3 col-sm-6">
                 <p>Mensajes</p>
                 <span id="alertas" class="badge">4</span>
             </div> 
-                
-            
         </div>
     </div>
 
+    <!--Clase container para las graficas principales-->
     <div class="container">
         <h5>Gráficas de Ingresos e Inscritos</h5>
         <div class="row" id="row1">
@@ -102,22 +106,26 @@
         </div>         
     </div>
 
+    <!--clase container fluid para el acordeon de las gráficas menos relevantes y la info de los bancos-->
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
                 <h5>Gráficas menos relevantes</h5>
+                <!--Acordeon de graficas-->
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item" style="background-color: rgb(76,74,74);">
                         <h2 class="accordion-header" id="headingOne">
-                            <button style="background-color: rgb(50,48,48); color: white;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button style="background-color: rgb(50,48,48); color: white;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Eventos con menos inscritos
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body" id="acordeon1">
-                                <div>
-                                    <h5>Grafica</h5>
-                                    <p>Texto</p>
+                                <div style="margin: auto;">
+                                    <h5>Análisis de datos</h5>
+                                    <p>Los eventos desarrollados en la provincia de sevilla, más concretamente en la zona del aljarafe
+                                        han sido los que han contado con la participación más baja.
+                                    </p>
                                 </div>
                                 <div>
                                     <canvas id="grafica_menos"></canvas>
@@ -132,10 +140,12 @@
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body" style="height: 500px;">
+                            <div class="accordion-body" style="height: 480px;">
                                 <div>
-                                    <h5>Grafica</h5>
-                                    <p>texto</p>
+                                    <h5>Análisis de datos</h5>
+                                    <p>Vemos que la tendencia desde nuestra creación es aumentar el número de eventos por año entorno 
+                                        al 15%-20%.
+                                    </p>
                                 </div>
                                 <div style="width: 90%; margin: auto;">
                                     <canvas id="grafica_anios"></canvas>
@@ -146,20 +156,114 @@
                     <div class="accordion-item" style="background-color: rgb(76,74,74);">
                         <h2 class="accordion-header" id="headingThree">
                             <button style="background-color: rgb(50,48,48); color: white;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
+                                Número de eventos por tipo de prueba
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <div class="accordion-body" style="height: 500px;">
+                                <div>
+                                    <h5>Análisis de datos</h5>
+                                    <p>Los eventos que cuentan con mayor número de pruebas son las maratones y las carreras nocturnas.
+                                       Las carreras benéficas y las generales son las que menos.
+                                    </p>
+                                </div>
+                                <div>
+                                    <canvas id="grafica_hexagonal"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--Cuentas bancarias-->
+            <div class="col-lg-6">
+                <h5>Información de Cuentas Bancaria</h5>
+                <section>
+                    <div id="ing">
+                        <h4>Ing Direct 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bank" viewBox="0 0 21 21">
+                                <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"/>
+                            </svg>
+                        </h4>
+                        <h5>C. San Juan</h5>
+                        <p>+767,01</p>
+                        <h5>Internet</h5>
+                        <p>-140,23</p>
+                        <h5>M.M Sevilla</h5>
+                        <p>+3.887,03</p>
+                        <h5>Luz</h5>
+                        <p>-123,56</p>
+                        <h4>Saldo</h4>
+                        <p id="saldo_ing">6.765,98</p>
+                    </div>
+                    <div id="santander">
+                        <h4>Santander
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bank" viewBox="0 0 21 21">
+                                <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"/>
+                            </svg>
+                        </h4>
+                        <h5>M.M Huesca</h5>
+                        <p>+1.345,10</p>
+                        <h5>Seguro Local</h5>
+                        <p>-987,23</p>
+                        <h5>M. Ávila</h5>
+                        <p>+12.876,75</p>
+                        <h5>S. Sociales</h5>
+                        <p>-3.865,12</p>
+                        <h4>Saldo</h4>
+                        <p id="saldo_santander">23.123,34</p>
+                    </div>
+                    <div id="caixa">
+                        <h4>Caixabank
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bank" viewBox="0 0 21 21">
+                                <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"/>
+                            </svg>
+                        </h4>
+                        <h5>C.B. Caritas</h5>
+                        <p>+10.456,78</p>
+                        <h5>S. Vehículo</h5>
+                        <p>-238,90</p>
+                        <h5>M.M Huelva</h5>
+                        <p>+5.871,34</p>
+                        <h5>IVA</h5>
+                        <p>-7.923,87</p>
+                        <h4>Saldo</h4>
+                        <p id="saldo_caixa">11.345,98</p>
+                    </div>
+                    <div id="cajarural">
+                        <h4>Caja Rural
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bank" viewBox="0 0 21 21">
+                                <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89L8 0ZM3.777 3h8.447L8 1 3.777 3ZM2 6v7h1V6H2Zm2 0v7h2.5V6H4Zm3.5 0v7h1V6h-1Zm2 0v7H12V6H9.5ZM13 6v7h1V6h-1Zm2-1V4H1v1h14Zm-.39 9H1.39l-.25 1h13.72l-.25-1Z"/>
+                            </svg>
+                        </h4>
+                        <h5>Decathlong</h5>
+                        <p>-1.345,90</p>
+                        <h5>JD Sport</h5>
+                        <p>-1.671,45</p>
+                        <h5>C.N. Getafe</h5>
+                        <p>+3.567,90</p>
+                        <h5>Cestas N.</h5>
+                        <p>-896,10</p>
+                        <h4>Saldo</h4>
+                        <p id="saldo_rural">17.456,23</p>
+                    </div>   
+                </section>
+                <!--Grafica de cuentas bancarias-->
+                <div style="height: 400px;">
+                    <canvas id="grafica_banco"></canvas>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--Botón flotante de subir arriba-->
+    <button onclick="topFunction()" id="myBtn" title="Ir arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="-1 0 18 18">
+          <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+    </button>
     
+    <!--Clase container-fluid para el footer-->
     <footer class="container-fluid">
         <div class="row">
             <div class="col-lg-4 col-sm-12">
