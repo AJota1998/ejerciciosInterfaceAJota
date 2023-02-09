@@ -18,7 +18,7 @@
     <h3 id="textoCerrar">Clica en cualquier parte para cerrar</h3>
     <button onclick="eliminar()" type="button" class="btn-close" aria-label="Close" id="botonCerrar">
       <video autoplay muted loop id="myVideo">
-        <source src="img/cabecera.mp4" type="video/mp4">
+        <source src="img/cabecera.mp4" type="video/mp4" alt="video de cabecera de weRunning">
       </video>
     </button>
   </div>
@@ -28,10 +28,10 @@
     <!--header-->
     <div class="row" id="encabezado">
       <div class="col-3">
-        <img id="logo" class="img-fluid" src="img/logo.svg" alt="imagen del logo weRunning">
+        <img id="logo" class="img-fluid" src="img/logo.svg" alt="imagen del logo de weRunning">
       </div>
       <a class="col-6" href="index.html">
-        <h1 class="efecto">weRunning</h1>
+        <h1>weRunning</h1>
       </a>        
     </div>
     <!--nav-->
@@ -65,13 +65,13 @@
                           <form action="formulariologin">
                             <div>
                               <label for="usuario">Usuario </label>
-                              <input type="text" name="user" id="inputUser">
+                              <input type="text" name="user" id="usuario">
                             </div>
                             <div>
-                              <label for="pass">Contraseña </label>
-                              <input type="password" name="pass" id="inputPass">
+                              <label for="password">Contraseña </label>
+                              <input type="password" name="pass" id="password">
                             </div>
-                              <input type="checkbox" name="sesion" id="inputSesion">
+                              <input type="checkbox" name="sesion" id="sesionAbierta">
                               <label for="sesionAbierta">Mantener sesión abierta</label>
                             <div>
                               <a href="#">Reestablecer la contraseña</a>
@@ -79,8 +79,8 @@
                           </form>
                         </div>
                         <div class="modal-footer mx-auto">
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                          <button type="button" class="btn btn-danger" id="cancelar_login" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-primary" id="aceptar_login" data-bs-dismiss="modal">Aceptar</button>
                         </div>
                       </div>
                     </div>
@@ -125,7 +125,7 @@
           <div class="cards">
             <div class="card" style="width: 90%;">
               <h5>Maratón</h5>
-              <img src="img/card1.jpg" class="card-img-top" alt="corredor">
+              <img src="img/card1.jpg" class="card-img-top" alt="corredores de una maraton">
               <div class="card-body">
                 <h4 class="card-title">Maratón de San Antolín</h4>
                 <p class="card-text">Celebrado, como cada año, el maratón de la ciudad de Palencia 
@@ -163,7 +163,7 @@
   
             <div class="card" style="width: 90%;">
               <h5>Carrera Popular</h5>
-              <img src="img/card2.jpg" class="card-img-top" alt="corredor">
+              <img src="img/card2.jpg" class="card-img-top" alt="corredor sosteniendo una medalla">
               <div class="card-body">
                 <h4 class="card-title">Carrera Popular "Amigos del programador"</h4>
                 <p class="card-text">El evento tuvo lugar el pasado 19 de enero de 2023 en la localidad de Castilleja, Sevilla.
@@ -201,7 +201,7 @@
   
             <div class="card" style="width: 90%;">
               <h5>Carrera Benéfica</h5>
-              <img src="img/card3.jpg" class="card-img-top" alt="corredor">
+              <img src="img/card3.jpg" class="card-img-top" alt="corredora en una pista de atletismo">
               <div class="card-body">
                 <h4 class="card-title">Carrera Benéfica "Corre por el hambre"</h4>
                 <p class="card-text">La tradicional carrera en beneficio del banco de alimentos de Sevilla contó con 
@@ -260,7 +260,7 @@
         <div class="col-lg-4 col-sm-12">
           <!--Banner-->
           <div>
-            <img id="banner" src="img/banner.png" class="img-fluid" alt="imagen del banner">
+            <img id="banner" src="img/banner.png" class="img-fluid" alt="banner de una promoción de weRunning">
           </div>
           <!--RRSS-->
           <div class="row">
@@ -295,21 +295,21 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/img1.jpg" class="d-block w-100" alt="corredor">
+                <img src="img/img1.jpg" class="d-block w-100" alt="corredora en posición de salida">
                 <div class="carousel-caption">
                   <h3>Maratón de Estocolmo</h3>
                   <p class="text-truncate">LLega la tradicional Maraton sueca celebrada por las regiones más características del país</p>                  
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/img2.jpg" class="d-block w-100" alt="corredora">
+                <img src="img/img2.jpg" class="d-block w-100" alt="medalla">
                 <div class="carousel-caption">
                   <h2>Entrena con weRunning</h2>
                   <p class="text-truncate">Apúntate a nuestra academia impartida por profesionales de alto nivel cualitativo</p>                  
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/img3.jpg" class="d-block w-100" alt="imagen atletas">
+                <img src="img/img3.jpg" class="d-block w-100" alt="corredor por una carretera">
                 <div class="carousel-caption">
                   <h2>Corre por el desierto</h2>
                   <p class="text-truncate">Novedad, llegamos al desierto africano de la mano del gobierno de España</p>
@@ -330,7 +330,7 @@
               <h6>Maratón Benéfica Valenciana</h6>
               <div class="card-body" id="videoLateral">
                 <video autoplay muted loop id="myVideo2">
-                  <source src="img/relevos.mp4" type="video/mp4">
+                  <source src="img/relevos.mp4" type="video/mp4" alt="video resumen de la maraton valenciana">
                 </video>
                 <p>Disputada la XVLI edición de la maratón valenciana en beneficio de las personas sin hogar, 
                   la cual contó con la masiva participación de los ciudadanos de la misma. En torno a 10.000 personas 
@@ -401,17 +401,18 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">
       <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="-1 0 18 18">
         <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
-      </svg></button>
+      </svg>
+    </button>
 
       <!--Container que incluye las imagenes de nuestros patrocinadores-->
       <div class="container-fluid">
         <h4>Conoce a nuestros patrocinadores</h4>
         <section>
-          <img src="img/cocacola.png" alt="cocacola">
-          <img src="img/binance.png" alt="binance">
-          <img src="img/booking.png" alt="booking">
-          <img src="img/nike.png" alt="nike">
-          <img src="img/decathlon.png" alt="decathlon">
+          <img class="bordesL" src="img/cocacola.png" alt="logo de cocacola">
+          <img src="img/binance.png" alt="logo de binance">
+          <img src="img/booking.png" alt="logo de booking">
+          <img src="img/nike.png" alt="logo de nike">
+          <img class="bordesR" src="img/decathlon.png" alt="logo de decathlon">
         </section>
       </div>
     

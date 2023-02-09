@@ -249,6 +249,7 @@ section img {
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
+    border-radius: 0px;
 }
 
 section img:hover {
