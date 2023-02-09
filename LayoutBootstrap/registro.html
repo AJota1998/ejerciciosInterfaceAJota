@@ -39,14 +39,14 @@
                     <a class="nav-link" href="#"><i class="bi bi-file-earmark-plus"></i> Crear nueva entrada</a>
                   </li>
                   <li class="nav-item">
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Login
-                    </button>
+                    </a>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header mx-auto">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                            <h2 class="modal-title fs-5" id="exampleModalLabel">Login</h2>
                           </div>
                           <div class="modal-body mx-auto">
                             <form action="formulariologin">
@@ -74,7 +74,7 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a href="registro.html"><button class="btn btn-sm btn-outline-primary" type="button">Registro</button></a>
+                    <a class="btn btn-sm btn-outline-primary" href="registro.html">Registro</a>
                   </li>
                   <li class="nav-item" id="lupa">
                     <p>
@@ -83,8 +83,8 @@
                       </a>
                     </p>
                     <div class="collapse" id="collapseExample">
-                      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></button>
-                      <input type="text">
+                      <a style="margin-top: 8%;" class="btn-close" aria-label="Close" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
+                      <input style="margin-top: 8%;" type="text">
                     </div>
                   </li>
                 </ul>
@@ -165,8 +165,8 @@
                   <div class="input-group col-md-6">
                     <div class="input-group-prepend col-md-8">
                       <label for="instagram">Usuario de Instagram</label>
-                      <span class="input-group-text" id="instagram">https://instagram.com/users/
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                      <span class="input-group-text">https://instagram.com/users/
+                        <input type="text" class="form-control" id="instagram">
                       </span>
                     </div>
                   </div>
@@ -253,7 +253,8 @@
                 <h6>Maratón Benéfica Valenciana</h6>
                 <div class="card-body" id="videoLateral">
                   <video autoplay muted loop id="myVideo2">
-                    <source src="img/relevos.mp4" type="video/mp4" alt="video resumen de la maraton valenciana">
+                    <source src="img/relevos.mp4" type="video/mp4">
+                    <p>resumen de la maraton valenciana</p>
                   </video>
                   <p>Disputada la XVLI edición de la maratón valenciana en beneficio de las personas sin hogar, 
                     la cual contó con la masiva participación de los ciudadanos de la misma. En torno a 10.000 personas 
@@ -307,8 +308,7 @@
               <div>
                 <h4>Día, hora y lugar. ¡Ya no tienes excusas!</h4>
                 <div class="gmap_canvas">
-                  <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=sevilla&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
+                  <iframe class="mapa" id="gmap_canvas" src="https://maps.google.com/maps?q=sevilla&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>                    <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
                     <br>
                       <a href="https://www.embedgooglemap.net"></a>
                   </div>
@@ -316,9 +316,9 @@
               </div>
             </div>
           </div>
-        </div>
+       
 
-        <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <button onclick="topFunction()" id="myBtn" title="ir al principio">
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="-1 0 18 18">
             <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
           </svg>
@@ -326,13 +326,13 @@
 
         <div class="container-fluid">
           <h4>Conoce a nuestros patrocinadores</h4>
-          <section>
+          <div class="patrocinadores">
             <img src="img/cocacola.png" alt="logo de cocacola">
             <img src="img/binance.png" alt="logo de binance">
             <img src="img/booking.png" alt="logo de booking">
             <img src="img/nike.png" alt="logo de nike">
             <img src="img/decathlon.png" alt="logo de decathlon">
-          </section>
+          </div>
         </div>
 
       <footer class="container-fluid">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
     <h3 id="textoCerrar">Clica en cualquier parte para cerrar</h3>
     <button onclick="eliminar()" type="button" class="btn-close" aria-label="Close" id="botonCerrar">
       <video autoplay muted loop id="myVideo">
-        <source src="img/cabecera.mp4" type="video/mp4" alt="video de cabecera de weRunning">
+        <source src="img/cabecera.mp4" type="video/mp4">
       </video>
     </button>
   </div>
@@ -45,21 +45,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Entradas</a>
+                  <a class="nav-link" aria-current="page" href="index.html">Entradas</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><i class="bi bi-file-earmark-plus"></i> Crear nueva entrada</a>
                 </li>
                 <li class="nav-item">
-                  <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <a class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Login
-                  </button>
-                  <!--Ventana modal del login-->
+                  </a>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header mx-auto">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                          <h2 class="modal-title fs-5" id="exampleModalLabel">Login</h2>
                         </div>
                         <div class="modal-body mx-auto">
                           <form action="formulariologin">
@@ -68,8 +67,8 @@
                               <input type="text" name="user" id="usuario">
                             </div>
                             <div>
-                              <label for="password">Contraseña </label>
-                              <input type="password" name="pass" id="password">
+                              <label for="pass">Contraseña </label>
+                              <input type="password" name="pass" id="pass">
                             </div>
                               <input type="checkbox" name="sesion" id="sesionAbierta">
                               <label for="sesionAbierta">Mantener sesión abierta</label>
@@ -79,16 +78,15 @@
                           </form>
                         </div>
                         <div class="modal-footer mx-auto">
-                          <button type="button" class="btn btn-danger" id="cancelar_login" data-bs-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-primary" id="aceptar_login" data-bs-dismiss="modal">Aceptar</button>
+                          <button id="login_cancelar" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                          <button id="login_aceptar" type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!--Fin ventana modal-->
                 </li>
                 <li class="nav-item">
-                  <a href="registro.html"><button class="btn btn-sm btn-outline-primary" type="button">Registro</button></a>
+                  <a class="btn btn-sm btn-outline-primary" href="registro.html">Registro</a>
                 </li>
                 <li class="nav-item" id="lupa">
                   <p>
@@ -96,10 +94,9 @@
                       <i class="bi bi-search"></i>
                     </a>
                   </p>
-                  <!--Colappse del input-->
                   <div class="collapse" id="collapseExample">
-                    <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></button>
-                    <input type="text">
+                    <a style="margin-top: 8%;" class="btn-close" aria-label="Close" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
+                    <input style="margin-top: 8%;" type="text">
                   </div>
                 </li>
               </ul>
@@ -330,7 +327,8 @@
               <h6>Maratón Benéfica Valenciana</h6>
               <div class="card-body" id="videoLateral">
                 <video autoplay muted loop id="myVideo2">
-                  <source src="img/relevos.mp4" type="video/mp4" alt="video resumen de la maraton valenciana">
+                  <source src="img/relevos.mp4" type="video/mp4">
+                  <p>Video resumen de la maraton valenciana</p>
                 </video>
                 <p>Disputada la XVLI edición de la maratón valenciana en beneficio de las personas sin hogar, 
                   la cual contó con la masiva participación de los ciudadanos de la misma. En torno a 10.000 personas 
@@ -386,7 +384,7 @@
             <div>
               <h4>Día, hora y lugar. ¡Ya no tienes excusas!</h4>
               <div class="gmap_canvas">
-                <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=sevilla&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe class="mapa" id="gmap_canvas" src="https://maps.google.com/maps?q=sevilla&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                   <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
                   <br>
                     <a href="https://www.embedgooglemap.net"></a>
@@ -395,10 +393,10 @@
             </div>
         </div>
       </div>
-    </div>
+    
 
     <!--Boton up flotante-->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <button onclick="topFunction()" id="myBtn" title="ir al principio">
       <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="-1 0 18 18">
         <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
       </svg>
@@ -407,13 +405,13 @@
       <!--Container que incluye las imagenes de nuestros patrocinadores-->
       <div class="container-fluid">
         <h4>Conoce a nuestros patrocinadores</h4>
-        <section>
-          <img class="bordesL" src="img/cocacola.png" alt="logo de cocacola">
+        <div class="patrocinadores">
+          <img src="img/cocacola.png" alt="logo de cocacola">
           <img src="img/binance.png" alt="logo de binance">
           <img src="img/booking.png" alt="logo de booking">
           <img src="img/nike.png" alt="logo de nike">
-          <img class="bordesR" src="img/decathlon.png" alt="logo de decathlon">
-        </section>
+          <img src="img/decathlon.png" alt="logo de decathlon">
+        </div>
       </div>
     
       <!--Container para el footer-->
