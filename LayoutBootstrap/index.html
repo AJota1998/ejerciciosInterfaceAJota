@@ -31,12 +31,12 @@
         <img id="logo" class="img-fluid" src="img/logo.svg" alt="imagen del logo de weRunning">
       </div>
       <a class="col-6" href="index.html">
-        <h1>weRunning</h1>
+        <h1 id="h1">weRunning</h1>
       </a>        
     </div>
     <!--nav-->
       <div class="row">
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <nav id="navbar" class="navbar navbar-expand-sm ">
           <div class="container-fluid">
             <a class="navbar-brand d-sm-none d-block" href="#" id="menu">Menú</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,7 +120,7 @@
           </nav>
           <!--componentes cards-->
           <div class="cards">
-            <div class="card" style="width: 90%;">
+            <div id="cardCentral" class="card" style="width: 90%;">
               <h5>Maratón</h5>
               <img src="img/card1.jpg" class="card-img-top" alt="corredores de una maraton">
               <div class="card-body">
@@ -158,7 +158,7 @@
               </div>
             </div>
   
-            <div class="card" style="width: 90%;">
+            <div id="cardCentral2" class="card" style="width: 90%;">
               <h5>Carrera Popular</h5>
               <img src="img/card2.jpg" class="card-img-top" alt="corredor sosteniendo una medalla">
               <div class="card-body">
@@ -194,45 +194,7 @@
                 <a href="#" class="card-link">#Popular
                 </a>
               </div>
-            </div>
-  
-            <div class="card" style="width: 90%;">
-              <h5>Carrera Benéfica</h5>
-              <img src="img/card3.jpg" class="card-img-top" alt="corredora en una pista de atletismo">
-              <div class="card-body">
-                <h4 class="card-title">Carrera Benéfica "Corre por el hambre"</h4>
-                <p class="card-text">La tradicional carrera en beneficio del banco de alimentos de Sevilla contó con 
-                  la participación de unas 12.000 personas de edades muy diversas, convirtiéndose así en una carrera 
-                  que representa a la perfección lo que weRunning quiere transmitir.
-                </p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Visualizaciones
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
-                  </svg> 9.111
-                </li>
-                <li class="list-group-item">Comentarios
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                  </svg> 339
-                </li>
-                <li class="list-group-item">Me gustas
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-square-heart" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12ZM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Z"/>
-                    <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
-                  </svg> 1.986
-                </li>
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">#Benéfica</a>
-                <a href="#" class="card-link">#Carrera</a>
-                <a href="#" class="card-link">#Corredores
-                </a>
-              </div>
-            </div>
+            </div> 
             <!--componente de paginacion-->
             <nav aria-label="Page navigation example">
               <ul class="pagination">
@@ -255,6 +217,10 @@
         </div>
         <!--Columna lateral-->
         <div class="col-lg-4 col-sm-12">
+          <div class="form-check form-switch">
+            <label class="form-check-label" for="lightSwitch"> Modo oscuro </label>
+            <input class="form-check-input" type="checkbox" id="lightSwitch"/>
+          </div>
           <!--Banner-->
           <div>
             <img id="banner" src="img/banner.png" class="img-fluid" alt="banner de una promoción de weRunning">
@@ -416,7 +382,7 @@
     
       <!--Container para el footer-->
       <footer class="container-fluid">
-        <div class="row">
+        <div id="alignfooter" class="row">
           <p id="direccion" class="col-3">Av. Virgen blanca, 17 Castilleja-Sevilla
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>

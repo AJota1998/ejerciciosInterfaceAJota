@@ -158,6 +158,11 @@ h6 {
     margin-bottom: 3%;
 }
 
+#cardLateralreg {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
 /*-----Columna lateral video-----*/
 
 #videoLateral {
@@ -299,8 +304,13 @@ a {
 footer {
     margin-top: 1%;
     text-align: center;
-    background-color: rgba(248,249,250,255);
     color: rgb(92, 89, 89);
+}
+
+#alignfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #direccion {
@@ -310,6 +320,36 @@ footer {
 .tituloFooter {
     text-decoration: underline;
 }
+
+/*-----Implementacion del cambio de modo-----*/
+
+.blanco {
+    color: white;
+}
+
+.negro {
+    color: rgb(32, 32, 32);
+}
+
+.bgblanco {
+    background-color: rgb(252, 245, 245);
+}
+
+.bgnegro {
+    background-color: rgb(32, 32, 32);
+}
+
+.cardblanco {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cardnegro {
+    background-color: rgb(73, 71, 71);
+    border-radius: 10px;
+}
+
+
 
 
 
