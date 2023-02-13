@@ -50,11 +50,6 @@
    text-align: center;
 }
 
-#encabezado h1 {
-    margin-top: 2%;
-    color: rgb(51, 50, 50);
-}
-
 #logo {
     height: 70%;
     width: 70%;
@@ -110,6 +105,7 @@
 
 h5 {
     margin-top: 1%;
+    text-align: center;
 }
 
 button {
@@ -177,6 +173,21 @@ h6 {
 }
 
 #videoLateral video {
+    border-radius: 5px;
+}
+
+#videoLateralreg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#videoLateralreg p {
+    margin-top: 3%;
+}
+
+#videoLateralreg video {
     border-radius: 5px;
 }
 
@@ -344,12 +355,38 @@ footer {
     border-radius: 10px;
 }
 
+.cardvideo {
+    background-color: white;
+    border-radius: 10px;
+}
+
 .cardnegro {
     background-color: rgb(73, 71, 71);
     border-radius: 10px;
 }
 
+.blancolista {
+    color: white;
+    list-style: none;
+    margin: 5px;
 
+}
+
+.negrolista {
+    color: rgb(32, 32, 32);
+    list-style: none;
+    margin: 5px;
+}
+
+.h_blanco {
+    color:white;
+    margin-top: 2%;
+}
+
+.h_negro {
+    color: rgb(32, 32, 32);
+    margin-top: 2%;
+}
 
 
 

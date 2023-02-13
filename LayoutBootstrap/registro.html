@@ -19,15 +19,15 @@
           <div class="col-3">
             <img id="logo" class="img-fluid" src="img/logo.svg" alt="imagen del logo weRunning">
           </div>
-          <a class="col-6" href="index.html">
-            <h1>weRunning</h1>
-          </a>        
+          <div class="col-6">
+            <h1>weRunning</h1> 
+          </div>
+                   
         </div>
         <div class="row">
           <nav id="navbar" class="navbar navbar-expand-sm">
             <div class="container-fluid">
-              <a class="navbar-brand d-sm-none d-block" href="#" id="menu">Menú</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button id="spanmenu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -44,7 +44,7 @@
                     </a>
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div id="model" class="modal-content">
                           <div class="modal-header mx-auto">
                             <h2 class="modal-title fs-5" id="exampleModalLabel">Login</h2>
                           </div>
@@ -97,11 +97,15 @@
         <div id="contenido" class="container">
           <div class="row">
             <div class="col-lg-8 col-sm-12">
-              <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <nav style="--bs-breadcrumb-divider: '>'; display: flex; justify-content: space-between;" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a id="migas" href="#">Inicio</a></li>
+                  <li class="breadcrumb-item"><a id="migas" href="index.html">Inicio</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Registro</li>
                 </ol>
+                <div class="form-check form-switch">
+                  <label class="form-check-label" for="lightSwitch"> Modo oscuro </label>
+                  <input class="form-check-input" type="checkbox" id="lightSwitch" />
+                </div>
               </nav>
               <!--Formulario de registro-->
               <form>
@@ -184,10 +188,6 @@
             </div>
     
             <div class="col-lg-4 col-sm-12">
-              <div class="form-check form-switch">
-                <label class="form-check-label" for="lightSwitch"> Modo oscuro </label>
-                <input class="form-check-input" type="checkbox" id="lightSwitch" />
-              </div>
               <div>
                 <img id="banner" src="img/banner.png" class="img-fluid" alt="banner de una promoción de weRunning">
               </div>
@@ -225,47 +225,35 @@
                   <div class="carousel-item active">
                     <img src="img/img1.jpg" class="d-block w-100" alt="corredora en posición de salida">
                     <div class="carousel-caption">
-                      <h3>Maratón de Estocolmo</h3>
-                      <p class="text-truncate">LLega la tradicional Maraton sueca celebrada por las regiones más características del país</p>                  
+                      <h2>Maratón de Estocolmo</h2>
+                      <h6 class="text-truncate">LLega la tradicional Maraton sueca celebrada por las regiones más características del país</h6>                  
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="img/img2.jpg" class="d-block w-100" alt="medalla">
                     <div class="carousel-caption">
                       <h2>Entrena con weRunning</h2>
-                      <p class="text-truncate">Apúntate a nuestra academia impartida por profesionales de alto nivel cualitativo</p>                  
+                      <h6 class="text-truncate">Apúntate a nuestra academia impartida por profesionales de alto nivel cualitativo</h6>                  
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="img/img3.jpg" class="d-block w-100" alt="corredor por una carretera">
                     <div class="carousel-caption">
                       <h2>Corre por el desierto</h2>
-                      <p class="text-truncate">Novedad, llegamos al desierto africano de la mano del gobierno de España</p>
+                      <h6 class="text-truncate">Novedad, llegamos al desierto africano de la mano del gobierno de España</h6>
                     </div>
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                  <span class="visually-hidden">Siguiente</span>
                 </button>
               </div>
-              <div class="card" id="cardLateralreg">
-                <h6>Maratón Benéfica Valenciana</h6>
-                <div class="card-body" id="videoLateral">
-                  <video autoplay muted loop id="myVideo2">
-                    <source src="img/relevos.mp4" type="video/mp4">
-                    <p>Video resumen de la maraton valenciana</p>
-                  </video>
-                  <p>Disputada la XVLI edición de la maratón valenciana en beneficio de las personas sin hogar, 
-                    la cual contó con la masiva participación de los ciudadanos de la misma. En torno a 10.000 personas 
-                    corrieron por la causa.
-                  </p>
-                </div>
-              </div>
+              
               <div class="divCalendar">
                 <h4>Enero 2023</h4>
                 <ol class="calendar">

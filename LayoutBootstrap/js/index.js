@@ -42,6 +42,44 @@ function eliminar() {
       p[i].className = "blanco"
     }
 
+    let h5 = document.getElementsByTagName('h5');
+    for (let i = 0; i < h5.length; i++) {
+      h5[i].className = "blanco"
+    } 
+    
+    let h4 = document.getElementsByTagName('h4');
+    for (let i = 0; i < h4.length; i++) {
+      h4[i].className = "blanco"
+    }
+
+    let a = document.getElementsByTagName('a');
+    for (let i = 0; i < a.length; i++) {
+      a[i].className = "blanco"
+    }
+
+    let li = document.getElementsByTagName('li');
+    for (let i = 0; i < li.length; i++) {
+      li[i].className = "blancolista"
+    }
+
+    let label = document.getElementsByTagName('label');
+    for (let i = 0; i < label.length; i++) {
+      label[i].className = "blanco"
+    }
+
+    let h1 = document.getElementsByTagName('h1');
+    for (let i = 0; i < h1.length; i++) {
+      h1[i].className = "h_blanco";
+    }
+
+    let modal = document.getElementById('model');
+    modal.setAttribute("style", "background-color: rgb(32, 32, 32);");
+
+    let spanmenu = document.getElementById('spanmenu');
+    spanmenu.setAttribute("style", "background: white");
+
+
+
     document.body.className = "bgnegro";
 
     let cardCentral = document.getElementById('cardCentral');
@@ -69,6 +107,40 @@ function eliminar() {
       p[i].className = "negro"
     }
 
+    let h5 = document.getElementsByTagName('h5');
+    for (let i = 0; i < h5.length; i++) {
+      h5[i].className = "negro"
+    }
+
+    let h4 = document.getElementsByTagName('h4');
+    for (let i = 0; i < h4.length; i++) {
+      h4[i].className = "negro"
+    }
+
+    let a = document.getElementsByTagName('a');
+    for (let i = 0; i < a.length; i++) {
+      a[i].className = "negro"
+    }
+
+    let li = document.getElementsByTagName('li');
+    for (let i = 0; i < li.length; i++) {
+      li[i].className = "negrolista"
+    }
+
+    let label = document.getElementsByTagName('label');
+    for (let i = 0; i < label.length; i++) {
+      label[i].className = "negro"
+    }
+
+    let h1 = document.getElementsByTagName('h1');
+    for (let i = 0; i < h1.length; i++) {
+      h1[i].className = "h_negro";
+    }
+
+    let modal = document.getElementById('model');
+    modal.setAttribute("style", "background-color: white;");
+    
+    
     document.body.className = "bgblanco";
 
     let cardCentral = document.getElementById('cardCentral');
@@ -81,7 +153,7 @@ function eliminar() {
     cardlateral.className = "cardblanco";
 
     let cardlateralreg = document.getElementById('cardLateralreg');
-    cardlateralreg.className = "cardblanco";
+    cardlateralreg.className = "cardvideo";
 
   }
 
@@ -102,20 +174,20 @@ function eliminar() {
    * @summary: get system default theme by media query
    */
   function getSystemDefaultTheme() {
-    const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkThemeMq = window.matchMedia('(prefers-color-scheme: light)');
     if (darkThemeMq.matches) {
-      return 'dark';
+      return 'light';
     }
-    return 'light';
+    return 'dark';
   }
 
   function setup() {
-    var settings = localStorage.getItem('lightSwitch');
+    var settings = localStorage.getItem('darkSwitch');
     if (settings == null) {
       settings = getSystemDefaultTheme();
     }
 
-    if (settings == 'dark') {
+    if (settings == 'light') {
       lightSwitch.checked = true;
     }
 
