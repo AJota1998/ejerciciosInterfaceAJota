@@ -79,7 +79,6 @@ function eliminar() {
     spanmenu.setAttribute("style", "background: white");
 
 
-
     document.body.className = "bgnegro";
 
     let cardCentral = document.getElementById('cardCentral');
@@ -136,10 +135,7 @@ function eliminar() {
     for (let i = 0; i < h1.length; i++) {
       h1[i].className = "h_negro";
     }
-
-    let modal = document.getElementById('model');
-    modal.setAttribute("style", "background-color: white;");
-    
+   
     
     document.body.className = "bgblanco";
 
